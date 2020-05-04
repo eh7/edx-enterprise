@@ -14,10 +14,11 @@ Change Log
 Unreleased
 --------------------
 
-[3.2.2] - 2020-05-04
+[3.2.2] - 2020-05-05
 --------------------
 
-* Pass enterprise customer's name to enterprise-catalog service
+* Pass enterprise customer's name to enterprise-catalog service during create/update of enterprise catalogs
+* Refactor `migrate_enterprise_catalogs` management command to check if a catalog already exists in the enterprise-catalog service. If a catalog does already exist, it will be updated with a PUT request; otherwise, a new catalog will be created with a POST request.
 
 
 [3.2.1] - 2020-05-04
