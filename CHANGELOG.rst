@@ -14,6 +14,12 @@ Change Log
 Unreleased
 --------------------
 
+[3.2.2] - 2020-05-04
+--------------------
+
+* Pass enterprise customer's name to enterprise-catalog service
+
+
 [3.2.1] - 2020-05-04
 --------------------
 
