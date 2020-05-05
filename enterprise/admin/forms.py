@@ -349,11 +349,11 @@ class EnterpriseCustomerCatalogAdminForm(forms.ModelForm):
             content_filter = EnterpriseCatalogQuery.objects.filter(
                 id=enterprise_catalog_query_id
             ).first().content_filter
-            return content_filter
+            content_filter = json.dumps(content_filter)
         else:
             content_filter = post_data.get(content_filter_key)
-            if content_filter:
-                return json.loads(content_filter)
+        if content_filter:
+            return json.loads(content_filter)
 
 
 class EnterpriseCustomerIdentityProviderAdminForm(forms.ModelForm):
