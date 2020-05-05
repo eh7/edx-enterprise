@@ -352,8 +352,10 @@ class EnterpriseCustomerCatalogAdminForm(forms.ModelForm):
             content_filter = json.dumps(content_filter)
         else:
             content_filter = post_data.get(content_filter_key)
-        if content_filter:
-            return json.loads(content_filter)
+
+        if not content_filter:
+            return None
+        return json.loads(content_filter)
 
 
 class EnterpriseCustomerIdentityProviderAdminForm(forms.ModelForm):
